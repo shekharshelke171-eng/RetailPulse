@@ -1,0 +1,15 @@
+.git
+.github
+.venv
+venv
+__pycache__
+*.pyc
+.env
+.env.*
+!.env.example
+mlflow.db
+mlartifacts/
+mlruns/
+_cleanup_review/
+data/sales.xlsx
+data/product.csv

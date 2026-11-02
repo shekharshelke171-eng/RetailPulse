@@ -123,3 +123,94 @@ Core analytics modules and the interactive dashboard are implemented. Testing, d
 - GitHub: https://github.com/shekharshelke171-eng
 - LinkedIn: https://www.linkedin.com/in/shekhar-shelke-6936263a6/
 - Portfolio: https://portfolio-y7l1.vercel.app/
+
+## 🐳 Docker Deployment
+
+RetailPulse is successfully containerized using Docker.
+
+### Docker Details
+
+| Configuration | Value |
+|---|---|
+| Docker Image | `retailpulse-app:latest` |
+| Container Name | `retailpulse-container` |
+| Application Port | `8501` |
+| Local URL | http://localhost:8501 |
+
+### Build Docker Image
+
+```bash
+docker build -t retailpulse-app .
+```
+
+### Run Docker Container
+
+```bash
+docker run -d --name retailpulse-container -p 8501:8501 retailpulse-app
+```
+
+### Access Dashboard
+
+Open your browser and visit:
+
+http://localhost:8501
+
+### Docker Testing Status
+
+- Docker image built successfully.
+- Container started successfully.
+- Streamlit dashboard tested successfully in the browser.
+- Dashboard pages and visualizations verified.
+
+**Status:** Docker containerization and local testing completed successfully.
+## ☸️ Kubernetes Deployment
+
+RetailPulse was successfully deployed and tested locally using Kubernetes through Docker Desktop.
+
+### Kubernetes Configuration
+
+| Configuration | Value |
+|---|---|
+| Cluster Node | `desktop-control-plane` |
+| Kubernetes Version | `v1.36.1` |
+| Deployment | `retailpulse-deployment` |
+| Pod Status | Running (1/1 Ready) |
+| Service | `retailpulse-service` |
+| Service Type | NodePort |
+| Application Port | `8501` |
+| NodePort | `30085` |
+
+### Kubernetes Files
+
+- `k8s/deployment.yaml` – Defines the RetailPulse application deployment.
+- `k8s/service.yaml` – Configures network access to the application.
+
+### Deployment Commands
+
+```bash
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+kubectl get nodes
+kubectl get pods
+kubectl get services
+```
+
+### Access the Dashboard
+
+The application was successfully tested using Kubernetes port forwarding:
+
+```bash
+kubectl port-forward service/retailpulse-service 8502:8501
+```
+
+Open: http://localhost:8502
+
+### Testing Results
+
+- Kubernetes cluster started successfully.
+- Kubernetes node reached Ready status.
+- Application Pod reached Running status with 1/1 Ready.
+- Kubernetes Service was created successfully.
+- Streamlit dashboard was accessed and tested through port forwarding.
+
+**Status:** Local Kubernetes deployment and dashboard testing completed successfully. This does not represent a production cloud deployment.
