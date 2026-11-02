@@ -1,7 +1,7 @@
+﻿
 ﻿# RetailPulse - AI-Powered Customer Analytics & Demand Forecasting Platform
 
 ## Project Overview
-
 RetailPulse is an AI-powered retail analytics and machine learning platform designed to analyze sales performance, understand customer behaviour, predict customer churn, forecast product demand, and support inventory planning.
 
 It provides an interactive Streamlit dashboard with multiple analytics modules.
