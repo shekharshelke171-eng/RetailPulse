@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large original datasets
+data/product.csv
+data/sales.xlsx
+data/raw/
+
+# ML experiment artifacts
+mlruns/
+mlflow/artifacts/
+
+# Logs and temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Local backups
+*.before_*
+*.bak
+# README backup files
+README_backup.md
+
+# Local MLflow database and artifacts
+mlflow.db
+mlartifacts/
+
+# Files under duplicate review
+_cleanup_review/
